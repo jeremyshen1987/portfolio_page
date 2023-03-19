@@ -1,0 +1,33 @@
+.intro {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro h1 {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    padding: 20px;
+}
+
+.intro_one, .intro_two {
+    display: flex;
+}
+
+.intro_one span {
+    flex: 0 1 20vw;
+    
+    /* background-color: skyblue; */
+}
+
+.intro_two span {
+    flex: 0 1 30vw;
+    
+    /* background-color: skyblue; */
+}
+
+.project_container{
+    width: 50px;
+    height: 35px;
+    background-color: purple;
+}
