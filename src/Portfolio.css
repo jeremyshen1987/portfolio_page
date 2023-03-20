@@ -1,4 +1,13 @@
+* {
+    --green: #82A284;
+    --bright-green: #A3F7BF;
+}
+
+body {
+    box-sizing: border-box;
+}
 .intro {
+    background-color: #003F5C;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
@@ -6,6 +15,7 @@
 }
 
 .intro h1 {
+    color: white;
     font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 20px;
 }
@@ -26,8 +36,80 @@
     /* background-color: skyblue; */
 }
 
-.project_container{
-    width: 50px;
-    height: 35px;
-    background-color: purple;
+h1.section_title{
+    margin: 0;
+    padding: 25px;
+    padding-inline-start: 10vw;
+    font-size: 3rem;
+    color: white
+}
+
+.projects, .section_title{
+    background-color: rgb(15 23 42);
+}
+
+.single_project {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    /* grid-auto-rows: minmax(500px, auto); */
+    min-height: 100vh;
+    padding: 20px;
+    border: 1px solid gold;
+}
+
+.project_snapshots {
+    grid-row: 1/7;
+    grid-column: 9/20;
+    background-image: url('./images/fortnite.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .65;
+    z-index: 1  ;
+}
+
+.project_snapshots:hover {
+    background-image: url('./images/cart.png');
+}
+
+.project_detail {
+    width: 100%;
+    padding: 36px;
+    background-color: black;
+    grid-column: 3/10;
+    grid-row: 3/6;
+    z-index: 100;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr 2fr;
+}
+
+.project_detail > * {
+    color: white;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.project_link {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 24px;
+}
+
+.source_code, .live_view {
+    padding: 10px;
+    border-bottom: 3px solid grey;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.live_view {
+    border-color: gold;
+}
+
+.test {
+    position: absolute;
+    background-color: pink;
 }

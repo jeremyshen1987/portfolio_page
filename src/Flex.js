@@ -7,7 +7,7 @@ function Flex(){
         <>
             <nav className='navbar'>
 
-                <div className='companyName'>Company Name</div>
+                <div className='companyName'>Jeremy Shen</div>
 
                 <a className='mobile_toggle_menu' onClick={toggle}>
                     <span className='mobile_bar'></span>
@@ -36,6 +36,8 @@ function Flex(){
         nav_buttons.classList.toggle('active')
 
     }
+
+    
 
 }
 
