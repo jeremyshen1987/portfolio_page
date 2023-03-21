@@ -1,4 +1,8 @@
 import './Portfolio.css'
+import shopping_page from './images/fortnite.png'
+import cart_page from './images/cart.png'
+import weather from './images/weather.png'
+
 
 
 function Portfolio(){
@@ -19,15 +23,17 @@ function Portfolio(){
 
         </div>
 
+
+
         <div >
-            <h1 className='section_title'>Projects:</h1>
+            <h1 className='section_title' id='project'>Projects:</h1>    
         </div>
         <div className='projects'>
 
             <div className='single_project'>
-                <span className='project_snapshots'></span>
+                <span className='project_snapshots'><img src={shopping_page} onMouseEnter={e => e.currentTarget.src=cart_page} onMouseLeave = {e => e.currentTarget.src=shopping_page}></img></span>
                 <div className='project_detail'>
-                    <span className='test'>test</span>
+                
                     <div className='project_title'>Shopping site <span></span></div>
                     <div className='project_description'>
                         <p>Built on 3rd party API. Features include Register/Sign-in; Search bar; Display order history, Various filters, Shopping cart preview.</p> 
@@ -42,14 +48,40 @@ function Portfolio(){
             </div>
 
             <div className='single_project'>
-
+            <span className='project_snapshots_2'><img src={weather}></img></span>
+                <div className='project_detail_2'>
+                    <div className='project_title'>Weather Forecast<span></span></div>
+                    <div className='project_description'>
+                        <p>Features: Preserve/load search result using localstorage; Display/remove search history; Slider bar on hourly forecast; Celcius fahrenheit conversion.</p> 
+                        <p>Layout is clone of Government of Canada Weather page. </p>
+                    </div>
+                    <div className='project_stack'>JavaScript Only</div>
+                    <div className='project_link'>
+                        <a href='https://weatherapp-nine-brown.vercel.app/' className='live_view'>Live View</a>
+                        <a href='https://github.com/jeremyshen1987/Web_Dev/tree/main/11%20Weather%20App' className='source_code'>Source Code</a>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <div className='section_title'><h1>Contact:</h1></div>
+        
+
+        <div >
+            <h1 className='section_title' id='contact'>Contact:</h1>    
+        </div>
+        <div className='contact'>
+
+        </div>
+
+
         </>
     )
+}
+
+function newSource(e, src){
+    console.log(e)
+    e.currentTarget.src = src
 }
 
 export default Portfolio;

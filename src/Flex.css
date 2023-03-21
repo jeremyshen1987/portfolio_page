@@ -1,7 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    max-width: 2000px;
 }
 
 nav {
@@ -14,11 +19,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: white;
+    padding: 10px 15px;
 }
 
-.companyName {
+.header_title {
     font-size: 2rem;
     margin: .5rem;
+    /* padding-inline-start: 2vw; */
 }
 
 nav ul {
@@ -62,10 +69,12 @@ nav li:hover {
     background-color: white;
 }
 
-@media (width <= 600px){
+@media (width <= 1000px){
+
     .mobile_toggle_menu{
         display: flex;
         cursor: pointer;
+        margin-top: 20px;
     }
     
     .navbar{
@@ -73,7 +82,7 @@ nav li:hover {
         flex-grow: 1;
     }
 
-    .companyName, .nav_tabs{
+    .header_title, .nav_tabs{
         width: 100%;
     }
 

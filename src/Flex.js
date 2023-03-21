@@ -7,7 +7,7 @@ function Flex(){
         <>
             <nav className='navbar'>
 
-                <div className='companyName'>Jeremy Shen</div>
+                <div className='header_title'>Jeremy Shen</div>
 
                 <a className='mobile_toggle_menu' onClick={toggle}>
                     <span className='mobile_bar'></span>
@@ -18,8 +18,8 @@ function Flex(){
                 <div className='nav_tabs'>
                     <ul>
                         <li><a href='#'>Home</a></li>
-                        <li><a href='about'>About</a></li>
-                        <li><a href='contact'>Contact</a></li>
+                        <li><a onClick={() => scroll('project')}>Projects</a></li>
+                        <li><a onClick={() => scroll('contact')}>Contact</a></li>
     
                     </ul>
                 </div>
@@ -32,12 +32,19 @@ function Flex(){
     function toggle(){
 
         const nav_buttons = document.getElementsByClassName('nav_tabs')[0]
-
         nav_buttons.classList.toggle('active')
 
     }
 
-    
+    function scroll(id){
+
+        document.getElementById(id).scrollIntoView()
+
+        if(window.innerWidth < 1000){
+            toggle()
+        }
+        
+    }
 
 }
 
