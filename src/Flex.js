@@ -5,7 +5,7 @@ function Flex(){
 
     return(
         <>
-            <nav className='navbar'>
+            <nav className='navbar' id='navbar'>
 
                 <div className='header_title'>Jeremy Shen</div>
 
@@ -17,7 +17,7 @@ function Flex(){
 
                 <div className='nav_tabs'>
                     <ul>
-                        <li><a href='#'>Home</a></li>
+                        <li><a onClick={() => scroll('intro')}>Home</a></li>
                         <li><a onClick={() => scroll('project')}>Projects</a></li>
                         <li><a onClick={() => scroll('contact')}>Contact</a></li>
     
