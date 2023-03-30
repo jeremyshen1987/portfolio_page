@@ -19,7 +19,7 @@ body {
     justify-content: center;
 }
 
-.intro_section h1, .project_section h1, .contact_section h1 {
+.intro_section h1, .project_section h1, .contact_section h1, .about_section h1 {
     color: white;
     font-size: clamp(2.5rem, 5vw, 3rem);
     padding: 50px 20px;
@@ -40,9 +40,24 @@ body {
 }
 
 
-.project_section, .contact_section {
+.project_section, .contact_section, .about_section {
     padding: 5vh 0;
     background-color: var(--navy);
+    color: white;
+}
+
+.about_section {
+    background-color: #1e293b;
+}
+
+.about {
+    margin: 100px auto;
+}
+
+.about p {
+    font-size: 1.25rem;
+    width: 70%;
+    margin: 2rem auto;
 }
 
 .section_title{
@@ -79,10 +94,13 @@ body {
     overflow: hidden;
 }
 
+.project_snapshots img {
+    max-height: 512px;
+}
+
 img {
     max-height: 100%;
     max-width: 100%;
-    overflow: clip;
 }
 
 .project_snapshots_2 {
@@ -106,7 +124,7 @@ img {
     position: relative;
     grid-column: 4/11;
     grid-row: 10/19;
-    z-index: 100;
+    z-index: 10;
 
 
     display: grid;
@@ -135,12 +153,26 @@ img {
     cursor: pointer;
     color: white;
     text-decoration: none;
+
+    transition: 1s;
 }
 
 .live_view {
     border-color: gold;
+    
 }
 
+.live_view:hover {
+    background-color: var(--orange);
+    color: black;
+    border-radius: 10px;
+    
+}
+
+.source_code:hover {
+    background-color: darkgray;
+    border-radius: 10px;
+}
 
 .contact_section {
     background-color: var(--indigo);
@@ -150,7 +182,7 @@ img {
 
 .contact_container {
     width: clamp(300px, 100vw, 1900px);
-    min-height: 50vh;
+    min-height: 30vh;
     padding: 48px 0;
     display: flex;
     justify-content: center;
@@ -185,12 +217,16 @@ legend {
 }
 
 input[type='email'], input[type='text'] {
-
+    border: solid 2px black;
+    border-radius: 10px;
     width: 240px;
+    height: 30px;
 }
 
 textarea {
     min-height: 100px;
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 .checkbox {
@@ -241,6 +277,33 @@ svg {
     height: 24px;
 }
 
+
+#overlay {
+    display: none;
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, .8);
+    
+
+    z-index: 999;
+}
+
+#please_wait {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
 @media (width <= 1200px) {
     .single_project {
         display: flex;
@@ -282,5 +345,10 @@ svg {
 
     .contact_form {
         min-width: 70%;
+    }
+
+    #please_wait{
+        font-size: 2rem;
+        left: 35%;
     }
 }

@@ -7,7 +7,7 @@ function Flex(){
         <>
             <nav className='navbar' id='navbar'>
 
-                <div className='header_title'>Jeremy Shen</div>
+                <div className='header_title'><a href='#'>Jeremy Shen</a></div>
 
                 <a className='mobile_toggle_menu' onClick={toggle}>
                     <span className='mobile_bar'></span>
@@ -18,6 +18,7 @@ function Flex(){
                 <div className='nav_tabs'>
                     <ul>
                         <li><a onClick={() => scroll('intro')}>Home</a></li>
+                        <li><a onClick={() => scroll('about')}>About</a></li>
                         <li><a onClick={() => scroll('project')}>Projects</a></li>
                         <li><a onClick={() => scroll('contact')}>Contact</a></li>
     
