@@ -73,14 +73,18 @@ body {
     padding: 20px;
 }
 
+.projects img {
+    aspect-ratio: 1.6;
+}
+
 .single_project {
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
     min-height: 80vh;
     max-width: 95vw;
-    /* padding: 20px; */
-    /* border: 1px solid gold; */
+    margin-bottom: 60px;
+
 }
 
 .project_snapshots, .project_snapshots_2 {
@@ -109,11 +113,11 @@ img {
 }
 
 
-.project_snapshots_2:hover img{
+/* .project_snapshots_2:hover img{
     transform:scale(1.25) ;
     transform-origin: 40% 0;
     transition: transform 1.5s, visibility .25s ease-in-out;
-}
+} */
 
 .project_detail, .project_detail_2 {
 
@@ -314,7 +318,7 @@ svg {
     }
 
     .single_project:after {
-        width: 75vw;
+        width: 100%;
         height: 4px;
 
         content: "";

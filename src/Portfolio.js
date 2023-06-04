@@ -1,5 +1,8 @@
 import { useRef } from 'react'
 import './Portfolio.css'
+
+import album_page from './images/album.png'
+import search_result from './images/search.png'
 import shopping_page from './images/fortnite.png'
 import cart_page from './images/cart.png'
 import weather from './images/weather.png'
@@ -32,13 +35,13 @@ function Portfolio(){
 
         <section className='about_section'>
             <div>
-                <h1 className='section_title' id='about'>About:</h1>    
+                <h1 className='section_title' id='about'>About me:</h1>    
             </div>
 
             <div className='about'>
                 <p>My programming journey started in late 2021, I taught myself Python and built two web scrappers for Canadian E-Commerce sites as a result.</p>
-                <p>On Feb 2022, I took a deep dive in Web Development after stumbled upon the Odin Project. The self paced curriculum focus on CSS, JavaScript and its framework. I was able to build several exciting projects after a few months of intense study. </p>
-                <p>Programming is challenging but super rewarding in the end which is why I love it so much!</p>
+                <p>In early 2022, I dedicate my full atention to web development since I enjoy solving technical challenges to build interactive website.</p>
+                <p>I'm constantly learning as a web developer, I will be learning typescript next!</p>
             </div>
         </section>
 
@@ -47,7 +50,25 @@ function Portfolio(){
                 <h1 className='section_title' id='project'>Projects:</h1>    
             </div>
 
+
+
             <div className='projects'>
+
+                <div className='single_project'>
+                    <span className='project_snapshots_2'><img src={shopping_page} onMouseEnter={e => e.currentTarget.src = search_result} onMouseLeave = {e => e.currentTarget.src= album_page}></img></span>
+                        <div className='project_detail_2'>
+                            <div className='project_title'>Music App<span></span></div>
+                            <div className='project_description'>
+                                <p>Build on NextJS. You can search for albums, artists, get personalized song recommendations. </p> 
+                                <p>Responsive design.</p>
+                            </div>
+                            <div className='project_stack'>End to end tested with Jest, React testing library and MSW.</div>
+                            <div className='project_link'>
+                                <a href='https://after-work.vercel.app/' className='live_view'>Live View</a>
+                                <a href='https://github.com/jeremyshen1987/AfterWork' className='source_code'>Source Code</a>
+                            </div>
+                        </div>
+                </div>
 
                 <div className='single_project'>
                     <span className='project_snapshots'><img src={shopping_page} onMouseEnter={e => e.currentTarget.src=cart_page} onMouseLeave = {e => e.currentTarget.src=shopping_page}></img></span>
@@ -66,21 +87,7 @@ function Portfolio(){
                     </div>
                 </div>
 
-                <div className='single_project'>
-                <span className='project_snapshots_2'><img src={weather}></img></span>
-                    <div className='project_detail_2'>
-                        <div className='project_title'>Weather Forecast<span></span></div>
-                        <div className='project_description'>
-                            <p>Built on 3rd party API. Features: Preserve/load search result using localstorage; Display/remove search history; Display local time; Slideshow for hourly forecast; Celcius fahrenheit conversion</p> 
-                            <p>The app changes the background during a rainy day</p>
-                        </div>
-                        <div className='project_stack'>JavaScript Only</div>
-                        <div className='project_link'>
-                            <a href='https://weatherapp-nine-brown.vercel.app/' className='live_view'>Live View</a>
-                            <a href='https://github.com/jeremyshen1987/Web_Dev/tree/main/11%20Weather%20App' className='source_code'>Source Code</a>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
 
@@ -116,7 +123,7 @@ function Portfolio(){
 
                             <div className='labelAndInput'>
                                 <label htmlFor='message'>Message: </label>
-                                <textarea type='text' id='message' ref={message} placeholder='Yes, this is a functional component. Feel free to send a test message!' required></textarea>
+                                <textarea type='text' id='message' ref={message} placeholder='Powered by AWS SES' required></textarea>
                             </div>
 
                             <div className='checkbox'>
