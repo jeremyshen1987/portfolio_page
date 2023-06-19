@@ -28,7 +28,7 @@ function Portfolio(){
             </div>
 
             <div className='intro_two'>
-                <span></span><h1>I want to be a web developer</h1>
+                <span></span><h1>I am a web developer</h1>
             </div>
 
         </section>
@@ -55,7 +55,7 @@ function Portfolio(){
             <div className='projects'>
 
                 <div className='single_project'>
-                    <span className='project_snapshots_2'><img src={shopping_page} onMouseEnter={e => e.currentTarget.src = search_result} onMouseLeave = {e => e.currentTarget.src= album_page}></img></span>
+                    <span className='project_snapshots_2'><img src={album_page} onMouseEnter={e => e.currentTarget.src = search_result} onMouseLeave = {e => e.currentTarget.src= album_page}></img></span>
                         <div className='project_detail_2'>
                             <div className='project_title'>Music App<span></span></div>
                             <div className='project_description'>
