@@ -22,7 +22,7 @@ function Flex(){
                         <li><a onClick={() => scroll('about')}>About</a></li>
                         <li><a onClick={() => scroll('project')}>Projects</a></li>
                         <li><a onClick={() => scroll('contact')}>Contact</a></li>
-                        <li><Link to='/resume'>Resume</Link></li>
+                        <li><a href='/Resume_Jeremy_Shen.pdf' onClick={toggle} download='Resume_Jeremy_Shen.pdf'>Resume</a></li>
     
                     </ul>
                 </div>
