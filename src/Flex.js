@@ -1,5 +1,6 @@
 import './Flex.css';
-
+import { Link } from 'react-router-dom';
+import Resume from './Resume';
 
 function Flex(){
 
@@ -21,6 +22,7 @@ function Flex(){
                         <li><a onClick={() => scroll('about')}>About</a></li>
                         <li><a onClick={() => scroll('project')}>Projects</a></li>
                         <li><a onClick={() => scroll('contact')}>Contact</a></li>
+                        <li><Link to='/resume'>Resume</Link></li>
     
                     </ul>
                 </div>

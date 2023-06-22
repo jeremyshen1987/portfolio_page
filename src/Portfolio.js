@@ -5,9 +5,6 @@ import album_page from './images/album.png'
 import search_result from './images/search.png'
 import shopping_page from './images/fortnite.png'
 import cart_page from './images/cart.png'
-import weather from './images/weather.png'
-
-
 
 
 function Portfolio(){
