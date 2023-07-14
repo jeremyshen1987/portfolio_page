@@ -37,8 +37,12 @@ function Portfolio(){
 
             <div className='about'>
                 <p>My programming journey started in late 2021, I taught myself Python and built two web scrappers for Canadian E-Commerce sites as a result.</p>
-                <p>In early 2022, I dedicate my full atention to web development since I enjoy solving technical challenges to build interactive website.</p>
-                <p>I'm constantly learning as a web developer, I will be learning typescript next!</p>
+                <p>In early 2022, I dedicate my full atention to web development and have successfully leveraged my skills in HTML, CSS & JavaScript to build visually appealing and interactive website.</p>
+                <p>I'm constantly learning as a web developer - Currently I am working on 
+                    <a href='https://github.com/jeremyshen1987/typescript_practice/blob/main/app/page.tsx' className='ts' > TypeScript</a>
+                    </p>
+                <p>If you are looking for a dedicated and versatile Full Stack Developer with a proven track record of delivering exceptional results, I am confident that my skills and experience make me a valuable addition to your team.</p>
+
             </div>
         </section>
 

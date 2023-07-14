@@ -39,6 +39,10 @@ body {
     
 }
 
+a.ts {
+    color: #3178c6;
+    text-decoration: none;
+}
 
 .project_section, .contact_section, .about_section {
     padding: 5vh 0;
@@ -112,12 +116,6 @@ img {
     grid-column: 3/13;
 }
 
-
-/* .project_snapshots_2:hover img{
-    transform:scale(1.25) ;
-    transform-origin: 40% 0;
-    transition: transform 1.5s, visibility .25s ease-in-out;
-} */
 
 .project_detail, .project_detail_2 {
 
