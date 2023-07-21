@@ -4,30 +4,30 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Flex from './Flex';
 import Portfolio from './Portfolio';
-import Resume from './Resume';
+import ProgressBar from './Progress_Bar';
+import Test from './Test';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-//router not in use
 
 root.render(
   <React.StrictMode>
 
+
     <BrowserRouter>
-      <Routes>
+          <Routes>
 
-        <Route path='/' element={ 
-        <>
-        <Flex />
-        <Portfolio />
-        </>     
-        } />
-        <Route path='/resume' element={<Resume />} />
+            <Route path='/' element={ 
+            <>
+            <Flex />
+            <ProgressBar />
+            <Portfolio />
+            </>     
+            } />
 
 
-      </Routes>
-    </BrowserRouter>   
- 
+          </Routes>
+    </BrowserRouter>      
 
 
 

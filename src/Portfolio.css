@@ -199,7 +199,9 @@ img {
 }
 
 
-
+p {
+    padding: 5px;
+}
 
 fieldset {
     /* width: clamp(240px, 40%, 800px); */
@@ -229,6 +231,7 @@ textarea {
     min-height: 100px;
     border: solid 2px black;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .checkbox {
