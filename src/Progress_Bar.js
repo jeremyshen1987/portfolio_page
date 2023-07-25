@@ -2,7 +2,24 @@ import { useEffect } from "react";
 
 export default function ProgressBar(){
 
+    // position progress bar next to nav bar
     useEffect(() => {
+
+
+      
+      }, [])
+
+    useEffect(() => {
+
+        const nav = document.querySelector('nav')
+        const nav_height = getComputedStyle(nav).height
+      
+
+        const progress_bar = document.querySelector('.progress_bar')
+
+        progress_bar.style.top = nav_height
+        console.log('p bar', progress_bar)
+
 
         function position(){
             console.log('position')
@@ -11,10 +28,10 @@ export default function ProgressBar(){
             let positionY = window.scrollY
             const height = document.body.scrollHeight - window.innerHeight
 
-            const progress = positionY / height
+            const progress_percentage = parseInt((positionY / height) * 100)
+            progress_bar.style.width = `${progress_percentage}%`
 
-
-            console.log('percentage', progress)
+            console.log('percentage', progress_percentage)
         }
 
         let pastTime = 0
@@ -27,7 +44,7 @@ export default function ProgressBar(){
 
 
 
-            if(timeNow - pastTime > 200){
+            if(timeNow - pastTime > 50){
 
                 pastTime = timeNow
                 position()
@@ -44,4 +61,7 @@ export default function ProgressBar(){
     }, [])
 
 
+    return(
+        <div className="progress_bar"></div>
+    )
 }

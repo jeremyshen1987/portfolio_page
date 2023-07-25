@@ -27,3 +27,22 @@ code {
   padding: 0;
   overflow-x: scroll;
 }
+
+/* progress bar */
+
+.progress_bar{
+  position: fixed;
+  top: 0;
+  background-color: gold;
+  width: 10%;
+  height: 5px;
+  z-index: 100;
+}
+
+/* .progress_bar::before {
+  position: absolute;
+  background-color: gold;
+  content: '';
+  min-width: 10%;
+  max-width: 100%;
+} */

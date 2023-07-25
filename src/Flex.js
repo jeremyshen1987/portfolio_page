@@ -1,8 +1,9 @@
 import './Flex.css';
-import { Link } from 'react-router-dom';
-import Resume from './Resume';
+
 
 function Flex(){
+
+
 
     return(
         <>

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Flex from './Flex';
 import Portfolio from './Portfolio';
 import ProgressBar from './Progress_Bar';
-import Test from './Test';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 
 
 root.render(
