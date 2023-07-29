@@ -28,7 +28,16 @@ export default function ProgressBar(){
             let positionY = window.scrollY
             const height = document.body.scrollHeight - window.innerHeight
 
-            const progress_percentage = parseInt((positionY / height) * 100)
+            let progress_percentage = parseInt((positionY / height) * 100)
+
+            if(progress_percentage <= 3){
+                progress_percentage = 0
+            }
+
+            if(progress_percentage >= 96){
+                progress_percentage = 100
+            }
+
             progress_bar.style.width = `${progress_percentage}%`
 
             console.log('percentage', progress_percentage)
